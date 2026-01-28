@@ -70,28 +70,41 @@ export const Hero = () => {
 
                     </div>
 
-                    <div className="lg:col-span-12 xl:col-span-5 relative hidden lg:block animate-fade-in-up [animation-delay:800ms]">
-                        <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-soft-xl border border-white/20">
+                    <div className="lg:col-span-12 xl:col-span-5 relative mt-12 lg:mt-0 animate-fade-in-up [animation-delay:800ms]">
+                        <div className="relative z-10 rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-soft-xl border border-white/20">
                             {/* Replaced Brutalist Image Box with Fluid Rounded Image Container */}
-                            <div className="bg-gradient-to-b from-slate-800 to-slate-900 h-[600px] w-full flex items-center justify-center text-white p-8 relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-alert-orange opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
-                                <div className="text-center">
-                                    <span className="opacity-50 font-display text-2xl tracking-widest">[IMAGEM]</span>
-                                    <p className="mt-4 text-sm text-slate-400 max-w-xs">
-                                        Dr. Lucas Nemes <br />
-                                        Foto profissional em fundo escuro ou recorte
-                                    </p>
-                                </div>
+                            <div className="bg-gradient-to-b from-slate-800 to-slate-900 h-[450px] lg:h-[600px] w-full flex items-end justify-center text-white relative overflow-hidden group">
+                                <img
+                                    src="/images/dr-lucas-hero.jpg"
+                                    alt="Dr. Lucas Nemes"
+                                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-60"></div>
                             </div>
                         </div>
                         {/* Decorative floating elements */}
-                        <div className="absolute -bottom-12 -left-12 bg-white p-6 rounded-3xl shadow-soft-orange flex flex-col gap-2 max-w-[200px] animate-float [animation-delay:1s]">
-                            <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Resultado</span>
+                        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] lg:w-auto lg:translate-x-0 lg:-left-8 lg:-bottom-8 z-20 animate-float [animation-delay:1s]">
+                            {/* iOS Notification Style Card */}
+                            <div className="bg-white/70 backdrop-blur-xl saturate-150 border border-white/40 p-4 rounded-3xl shadow-xl w-full lg:w-[260px]">
+                                <div className="flex items-center justify-between mb-2 opacity-60">
+                                    <div className="flex items-center gap-1.5">
+                                        <div className="w-5 h-5 rounded-md bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-sm">
+                                            <Calendar size={10} className="text-white" />
+                                        </div>
+                                        <span className="text-[10px] font-semibold text-slate-800 uppercase tracking-wide">Método Vida Plena</span>
+                                    </div>
+                                    <span className="text-[10px] text-slate-600">Agora</span>
+                                </div>
+
+                                <div className="flex gap-3 items-center">
+                                    <div className="flex-1">
+                                        <h4 className="font-semibold text-slate-900 text-sm mb-0.5">Resultado Confirmado</h4>
+                                        <p className="text-sm text-slate-600 leading-snug">
+                                            100% de controle metabólico alcançado.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <p className="font-display font-bold text-4xl text-slate-900">100%</p>
-                            <p className="text-sm text-slate-500 font-medium">Controle Metabólico</p>
                         </div>
                     </div>
 
