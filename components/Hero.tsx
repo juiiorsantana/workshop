@@ -63,7 +63,7 @@ export const Hero = () => {
                                     <p className="text-xs text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full w-fit mt-1">Lote promocional de lançamento</p>
                                 </div>
                                 <FluidButton onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto">
-                                    QUERO GARANTIR MINHA VAGA AGORA <ArrowRight size={20} />
+                                    QUERO GARANTIR MINHA VAGA<ArrowRight size={20} />
                                 </FluidButton>
                             </div>
                         </div>
