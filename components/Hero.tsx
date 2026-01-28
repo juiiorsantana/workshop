@@ -6,7 +6,7 @@ export const Hero = () => {
     return (
         <section className="relative pt-32 pb-24 bg-clinical-white overflow-hidden">
             {/* Fluid Background Elements */}
-            <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-orange-100 to-red-50 rounded-full blur-[120px] opacity-60 animate-float"></div>
+            <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-cyan-100 to-blue-50 rounded-full blur-[120px] opacity-60 animate-float"></div>
             <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] opacity-50"></div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -16,7 +16,7 @@ export const Hero = () => {
 
                         {/* Date / Event Info */}
                         <div className="flex items-center justify-center lg:justify-start gap-2 text-slate-600 font-medium animate-fade-in-up">
-                            <Calendar className="w-5 h-5 text-alert-orange" />
+                            <Calendar className="w-5 h-5 text-primary" />
                             <span>15 e 16 de março | Online via Zoom | Ao vivo</span>
                         </div>
 
@@ -29,7 +29,7 @@ export const Hero = () => {
                         {/* Headline */}
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-slate-900 animate-fade-in-up [animation-delay:200ms]">
                             Reconstrua Sua Vida <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-alert-orange to-red-600">Após a Bariátrica</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">Após a Bariátrica</span>
                         </h1>
 
                         {/* Subheadline */}
@@ -48,11 +48,11 @@ export const Hero = () => {
                             {/* Scarcity Bar */}
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm font-medium text-slate-700">
-                                    <span className="flex items-center gap-1"><TrendingUp size={16} className="text-red-500" /> 37% do lote atual já vendido</span>
-                                    <span className="text-red-500 font-bold">Últimas vagas</span>
+                                    <span className="flex items-center gap-1"><TrendingUp size={16} className="text-cyan-600" /> 37% do lote atual já vendido</span>
+                                    <span className="text-cyan-600 font-bold">Últimas vagas</span>
                                 </div>
                                 <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-red-500 to-alert-orange w-[37%] rounded-full"></div>
+                                    <div className="h-full bg-gradient-to-r from-cyan-600 to-primary w-[37%] rounded-full"></div>
                                 </div>
                             </div>
 

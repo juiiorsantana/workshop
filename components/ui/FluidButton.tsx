@@ -15,9 +15,9 @@ export const FluidButton: React.FC<FluidButtonProps> = ({
     const baseStyles = "font-display font-medium text-lg px-8 py-4 rounded-full transition-all duration-300 active:scale-95 flex items-center justify-center gap-2";
 
     const variants = {
-        primary: "bg-gradient-to-r from-alert-orange to-red-600 text-white shadow-soft-orange hover:shadow-glow hover:-translate-y-1",
+        primary: "bg-gradient-to-r from-primary to-cyan-600 text-white shadow-soft-primary hover:shadow-glow hover:-translate-y-1",
         secondary: "bg-white text-slate-900 border border-slate-100 shadow-soft-sm hover:shadow-soft hover:bg-slate-50",
-        outline: "bg-transparent text-slate-600 border border-slate-200 hover:border-alert-orange hover:text-alert-orange",
+        outline: "bg-transparent text-slate-600 border border-slate-200 hover:border-primary hover:text-primary",
     };
 
     return (

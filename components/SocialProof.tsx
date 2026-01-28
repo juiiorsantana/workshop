@@ -43,7 +43,7 @@ export const SocialProof: React.FC = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <h2 className="font-display font-bold text-4xl md:text-5xl text-medical-slate mb-6">
-                        Mais de <span className="text-alert-orange">500 pacientes</span> já transformaram suas vidas
+                        Mais de <span className="text-primary">500 pacientes</span> já transformaram suas vidas
                     </h2>
                     <p className="text-lg text-slate-600">
                         com o acompanhamento do Dr. Lucas Nemes. Resultados reais, baseados em ciência e empatia.
@@ -95,9 +95,9 @@ export const SocialProof: React.FC = () => {
                                 className="min-w-[85%] md:min-w-[400px] snap-center first:pl-2 last:pr-2"
                             >
                                 <div className="bg-white rounded-4xl p-8 shadow-soft hover:shadow-soft-xl transition-all duration-500 h-full border border-slate-100 flex flex-col relative overflow-hidden group">
-                                    <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-alert-orange to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                    <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-primary to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                                    <div className="text-4xl text-alert-orange mb-4 font-serif opacity-30">"</div>
+                                    <div className="text-4xl text-primary mb-4 font-serif opacity-30">"</div>
                                     <p className="text-lg text-slate-700 italic mb-8 flex-grow leading-relaxed">
                                         {testimonial.quote}
                                     </p>
@@ -110,7 +110,7 @@ export const SocialProof: React.FC = () => {
                                             <div className="font-bold text-medical-slate">
                                                 {testimonial.author}, <span className="text-slate-400 font-normal">{testimonial.age}</span>
                                             </div>
-                                            <div className="text-xs text-alert-orange font-medium uppercase tracking-wider">
+                                            <div className="text-xs text-primary font-medium uppercase tracking-wider">
                                                 {testimonial.role}
                                             </div>
                                         </div>

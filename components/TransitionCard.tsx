@@ -59,7 +59,7 @@ export const TransitionCard = () => {
                     <div className="space-y-8 animate-fade-in-up [animation-delay:200ms]">
                         <div className="space-y-4">
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                                Manter é mais difícil do que <span className="text-transparent bg-clip-text bg-gradient-to-r from-alert-orange to-red-600">emagrecer</span>.
+                                Manter é mais difícil do que <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">emagrecer</span>.
                             </h2>
                             <p className="text-lg text-slate-600 font-medium">
                                 Porque é no Pós que você precisa:
@@ -102,9 +102,9 @@ export const TransitionCard = () => {
                             </div>
 
                             {/* Card 4 */}
-                            <div className="bg-white p-5 rounded-2xl shadow-soft-sm border border-slate-100 hover:shadow-soft-md hover:border-orange-100 transition-all duration-300 md:col-span-2">
+                            <div className="bg-white p-5 rounded-2xl shadow-soft-sm border border-slate-100 hover:shadow-soft-md hover:border-cyan-100 transition-all duration-300 md:col-span-2">
                                 <div className="flex gap-4 items-center">
-                                    <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 shrink-0">
+                                    <div className="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-primary shrink-0">
                                         <Heart size={20} />
                                     </div>
                                     <p className="font-bold text-slate-800 text-lg">Cuidar do corpo e da mente juntos</p>

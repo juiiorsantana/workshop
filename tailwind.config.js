@@ -10,16 +10,17 @@ export default {
     extend: {
       colors: {
         'medical-slate': '#0f172a',
-        'alert-orange': '#ff4d00',
+        'primary': '#04A3CB', // Formerly alert-orange
+        'alert-orange': '#ff4d00', // Restored for specific sections
         'clinical-white': '#f8fafc',
         'brutalist-black': '#000000',
         'grid-line': '#e2e8f0',
-        'soft-orange': '#fff7ed', // Added for soft backgrounds
-        'fluid-blue': '#eff6ff', // Added for fluid backgrounds
+        'soft-orange': '#fff7ed', // Kept for legacy support or soft backgrounds, can be removed if unused
+        'fluid-blue': '#eff6ff',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
       },
       borderRadius: {
         '4xl': '2rem',
@@ -33,8 +34,9 @@ export default {
         'soft-sm': '0 2px 8px -1px rgba(0, 0, 0, 0.05)',
         'soft': '0 4px 16px -2px rgba(0, 0, 0, 0.08)',
         'soft-xl': '0 12px 32px -4px rgba(0, 0, 0, 0.12)',
-        'soft-orange': '0 8px 24px -4px rgba(255, 77, 0, 0.2)',
-        'glow': '0 0 20px rgba(255, 77, 0, 0.3)',
+        'soft-primary': '0 8px 24px -4px rgba(4, 163, 203, 0.2)', // Updated color
+        'soft-orange': '0 8px 24px -4px rgba(255, 77, 0, 0.2)', // Restored
+        'glow': '0 0 20px rgba(4, 163, 203, 0.3)', // Updated color
       },
       animation: {
         'ticker': 'ticker 20s linear infinite',

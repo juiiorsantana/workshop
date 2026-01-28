@@ -9,22 +9,8 @@ import { FluidButton } from './components/ui/FluidButton';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-clinical-white font-sans selection:bg-alert-orange selection:text-white pt-[76px]">
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 px-4 py-4 transition-all duration-300">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="font-display font-bold text-xl tracking-tight text-slate-900 flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-alert-orange to-red-500 flex items-center justify-center text-white text-xs">LN</div>
-            DR. LUCAS NEMES
-          </div>
-          <FluidButton
-            className="hidden md:flex px-6 py-2 text-sm"
-            onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            GARANTIR VAGA
-          </FluidButton>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-clinical-white font-sans selection:bg-primary selection:text-white">
+
 
       <Hero />
       <Agitation />

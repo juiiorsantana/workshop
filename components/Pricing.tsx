@@ -13,8 +13,8 @@ export const Pricing = () => {
                 <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 md:gap-0 bg-white rounded-[3rem] shadow-soft-xl overflow-hidden border border-slate-100">
 
                     <div className="p-12 md:p-16 flex flex-col justify-center">
-                        <h3 className="text-sm font-bold tracking-widest text-alert-orange uppercase mb-6 flex items-center gap-2">
-                            <span className="w-8 h-[1px] bg-alert-orange"></span>
+                        <h3 className="text-sm font-bold tracking-widest text-primary uppercase mb-6 flex items-center gap-2">
+                            <span className="w-8 h-[1px] bg-primary"></span>
                             O QUE ESTÁ INCLUSO
                         </h3>
                         <ul className="space-y-6">
@@ -40,7 +40,7 @@ export const Pricing = () => {
 
                     <div className="p-12 md:p-16 flex flex-col justify-center bg-slate-900 text-white relative overflow-hidden group">
                         {/* Gradient Blobs */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-alert-orange rounded-full blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-primary rounded-full blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
                         <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-[80px] opacity-10"></div>
 
                         <div className="relative z-10">
@@ -55,7 +55,7 @@ export const Pricing = () => {
                             </div>
                             <p className="opacity-50 line-through text-lg mb-10 pl-2">De R$ 197,00</p>
 
-                            <FluidButton variant="primary" fullWidth className="shadow-soft-orange hover:shadow-glow">
+                            <FluidButton variant="primary" fullWidth className="shadow-soft-primary hover:shadow-glow">
                                 GARANTIR AGORA
                             </FluidButton>
 
