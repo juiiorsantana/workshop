@@ -1,7 +1,7 @@
 import React from 'react';
-import { FluidButton } from './ui/FluidButton';
 import { Marquee } from './ui/Marquee';
 import { PointerHighlight } from './ui/pointer-highlight';
+import { motion } from 'motion/react';
 
 const stats = [
     { label: 'Pacientes atendidos', value: '+500', icon: '👥' },
@@ -34,7 +34,7 @@ const testimonials = [
 export const SocialProof: React.FC = () => {
 
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden">
+        <section className="py-24 bg-transparent relative overflow-hidden scroll-section">
             {/* Background Elements */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
                 <div className="absolute top-20 right-0 w-96 h-96 bg-fluid-blue rounded-full blur-3xl opacity-50 animate-pulse-fast"></div>
@@ -42,21 +42,38 @@ export const SocialProof: React.FC = () => {
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <motion.div
+                    className="text-center max-w-3xl mx-auto mb-16"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-100px' }}
+                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
                     <h2 className="font-display font-bold text-4xl md:text-5xl text-medical-slate mb-6">
                         Mais de <PointerHighlight containerClassName="inline-flex align-bottom" rectangleClassName="bg-blue-500/20 border-none rounded-md" pointerClassName="text-blue-500"><span className="text-primary px-1">500 pacientes</span></PointerHighlight> já transformaram suas vidas
                     </h2>
                     <p className="text-lg text-slate-600">
                         com o acompanhamento do Dr. Lucas Nemes. Resultados reais, baseados em ciência e empatia.
                     </p>
-                </div>
+                </motion.div>
 
                 {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+                <motion.div
+                    className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
+                >
                     {stats.map((stat, index) => (
-                        <div
+                        <motion.div
                             key={index}
                             className="bg-white rounded-3xl p-6 shadow-soft hover:shadow-soft-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-100 flex flex-col items-center text-center group"
+                            variants={{
+                                hidden: { opacity: 0, scale: 0.8, y: 20 },
+                                visible: { opacity: 1, scale: 1, y: 0 }
+                            }}
+                            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
                             <div className="w-12 h-12 mb-4 bg-fluid-blue rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                                 {stat.icon}
@@ -67,12 +84,18 @@ export const SocialProof: React.FC = () => {
                             <div className="text-sm text-slate-500 font-medium">
                                 {stat.label}
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Testimonials */}
-                <div className="relative">
+                <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
                     <div className="flex justify-between items-end mb-8 px-2">
                         <div>
                             <h3 className="font-display font-bold text-2xl text-medical-slate mb-2">
@@ -117,7 +140,7 @@ export const SocialProof: React.FC = () => {
                         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-clinical-white dark:from-background"></div>
                         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-clinical-white dark:from-background"></div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

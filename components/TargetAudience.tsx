@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const audienceItems = [
     { title: "Já operou", desc: "e vive em fase de manutenção" },
@@ -12,7 +13,7 @@ const audienceItems = [
 
 export const TargetAudience: React.FC = () => {
     return (
-        <section className="py-32 bg-slate-950 relative overflow-hidden border-t border-slate-900/50">
+        <section className="py-32 bg-slate-950 relative overflow-hidden border-t border-slate-900/50 scroll-section">
 
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-20 pointer-events-none [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"></div>
@@ -20,11 +21,11 @@ export const TargetAudience: React.FC = () => {
             {/* Marquee Banners - NOW Z-0 to be behind text but visible */}
             <div className="absolute top-20 w-full transform -rotate-3 z-0 pointer-events-none">
                 <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-4 shadow-2xl">
-                    <div className="animate-marquee whitespace-nowrap flex space-x-12 items-center">
+                    <div className="animate-marquee whitespace-nowrap flex space-x-12 items-center" style={{ "--duration": "20s", "--gap": "3rem" } as React.CSSProperties}>
                         {[...Array(20)].map((_, i) => (
                             <div key={i} className="flex items-center gap-12">
                                 {/* Removed outline-text for now to guarantee visibility, using white/20 text */}
-                                <span className="text-white/20 font-display font-black text-6xl tracking-widest uppercase italic">LOGO METODO</span>
+                                <span className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic">LOGO METODO</span>
                             </div>
                         ))}
                     </div>
@@ -33,10 +34,10 @@ export const TargetAudience: React.FC = () => {
 
             <div className="absolute top-40 w-full transform rotate-3 z-0 pointer-events-none">
                 <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-4 shadow-2xl">
-                    <div className="animate-marquee-reverse whitespace-nowrap flex space-x-12 items-center">
+                    <div className="animate-marquee-reverse whitespace-nowrap flex space-x-12 items-center" style={{ "--duration": "20s", "--gap": "3rem" } as React.CSSProperties}>
                         {[...Array(20)].map((_, i) => (
                             <div key={i} className="flex items-center gap-12">
-                                <span className="text-white/20 font-display font-black text-6xl tracking-widest uppercase italic">LOGO METODO</span>
+                                <span className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic">LOGO METODO</span>
                             </div>
                         ))}
                     </div>
@@ -45,7 +46,13 @@ export const TargetAudience: React.FC = () => {
 
 
             <div className="container mx-auto px-4 relative z-10 pt-16">
-                <div className="text-center mb-20">
+                <motion.div
+                    className="text-center mb-20"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-100px' }}
+                    transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-xs font-bold uppercase tracking-widest mb-6 shadow-inner">
                         <span className="w-2 h-2 rounded-full bg-alert-orange animate-pulse"></span>
                         Diagnóstico Inicial
@@ -56,11 +63,25 @@ export const TargetAudience: React.FC = () => {
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">
                         Se você se identifica com um ou mais pontos abaixo, a imersão foi desenhada especificamente para o seu momento.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <motion.div
+                    className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto"
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ staggerChildren: 0.08, delayChildren: 0.2 }}
+                >
                     {audienceItems.map((item, index) => (
-                        <div key={index} className="group relative">
+                        <motion.div
+                            key={index}
+                            className="group relative"
+                            variants={{
+                                hidden: { opacity: 0, y: 30, scale: 0.9 },
+                                visible: { opacity: 1, y: 0, scale: 1 }
+                            }}
+                            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+                        >
                             {/* Hover Glow */}
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-alert-orange/0 to-red-600/0 group-hover:from-alert-orange/50 group-hover:to-red-600/50 rounded-2xl blur transition duration-500 opacity-0 group-hover:opacity-100"></div>
 
@@ -78,14 +99,20 @@ export const TargetAudience: React.FC = () => {
                                     {item.desc}
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
-                <div className="mt-20 text-center">
+                <motion.div
+                    className="mt-20 text-center"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.6 }}
+                >
                     <p className="text-slate-500 text-sm uppercase tracking-widest mb-4">Não deixe para depois</p>
                     <ArrowRight className="mx-auto text-alert-orange animate-bounce" />
-                </div>
+                </motion.div>
             </div>
         </section>
     );

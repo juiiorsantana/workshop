@@ -4,8 +4,14 @@ import { Agitation } from './components/Agitation';
 import { TransitionCard } from './components/TransitionCard';
 import { SocialProof } from './components/SocialProof';
 import { TargetAudience } from './components/TargetAudience';
-import { Pricing } from './components/Pricing';
+
+import MethodDifferential from './components/MethodDifferential';
+import { Instructor } from './components/Instructor';
+import WorkshopProgram from './components/WorkshopProgram';
+import { WhatsIncluded } from './components/WhatsIncluded';
+
 import { FluidButton } from './components/ui/FluidButton';
+import WhyCheap from './components/WhyCheap';
 import { GridBackground } from './components/ui/GridBackground';
 
 const App: React.FC = () => {
@@ -18,9 +24,12 @@ const App: React.FC = () => {
         <Hero />
         <Agitation />
         <TransitionCard />
-        <SocialProof />
         <TargetAudience />
-        <Pricing />
+        <SocialProof />
+        <MethodDifferential />
+
+        <WhyCheap />
+        <Instructor />
 
         {/* Footer */}
         <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">

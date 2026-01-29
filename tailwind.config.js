@@ -45,6 +45,7 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         marquee: "marquee var(--duration) infinite linear",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        "marquee-reverse": "marquee-reverse var(--duration) linear infinite",
         gradient: "gradient 8s linear infinite",
       },
       keyframes: {
@@ -72,6 +73,10 @@ export default {
           to: {
             backgroundPosition: "var(--bg-size, 300%) 0",
           },
+        },
+        "marquee-reverse": {
+          from: { transform: "translateX(calc(-100% - var(--gap)))" },
+          to: { transform: "translateX(0)" },
         },
       }
     },
