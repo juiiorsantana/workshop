@@ -3,7 +3,7 @@ import { CheckCheck, Quote, Brain, Heart, Utensils, Leaf } from 'lucide-react';
 
 export const TransitionCard = () => {
     return (
-        <section className="py-24 bg-blue-50/50 overflow-hidden relative">
+        <section className="py-24 bg-transparent overflow-hidden relative">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white rounded-full blur-[100px] opacity-60 pointer-events-none"></div>
 

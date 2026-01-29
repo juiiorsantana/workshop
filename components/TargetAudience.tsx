@@ -15,7 +15,7 @@ export const TargetAudience: React.FC = () => {
         <section className="py-32 bg-slate-950 relative overflow-hidden border-t border-slate-900/50">
 
             {/* Background Texture */}
-            <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(#334155 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+            <div className="absolute inset-0 opacity-20 pointer-events-none [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"></div>
 
             {/* Marquee Banners - NOW Z-0 to be behind text but visible */}
             <div className="absolute top-20 w-full transform -rotate-3 z-0 pointer-events-none">

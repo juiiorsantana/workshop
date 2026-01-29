@@ -43,6 +43,9 @@ export default {
         'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
         'float': 'float 6s ease-in-out infinite',
+        marquee: "marquee var(--duration) infinite linear",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+        gradient: "gradient 8s linear infinite",
       },
       keyframes: {
         ticker: {
@@ -56,7 +59,20 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
-        }
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        gradient: {
+          to: {
+            backgroundPosition: "var(--bg-size, 300%) 0",
+          },
+        },
       }
     },
   },

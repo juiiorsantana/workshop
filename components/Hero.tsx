@@ -1,10 +1,10 @@
-import React from 'react';
-import { FluidButton } from './ui/FluidButton';
+import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { ArrowRight, Calendar, TrendingUp } from 'lucide-react';
+import { cn } from '../lib/utils';
 
 export const Hero = () => {
     return (
-        <section className="relative pt-32 pb-24 bg-clinical-white overflow-hidden">
+        <section className="relative pt-10 pb-24 bg-transparent overflow-hidden">
             {/* Fluid Background Elements */}
             <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-cyan-100 to-blue-50 rounded-full blur-[120px] opacity-60 animate-float"></div>
             <div className="absolute bottom-[10%] left-[-10%] w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] opacity-50"></div>
@@ -21,9 +21,23 @@ export const Hero = () => {
                         </div>
 
                         {/* Badge */}
-                        <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-slate-100 rounded-full px-4 py-1.5 w-fit mx-auto lg:mx-0 shadow-soft-sm animate-fade-in-up [animation-delay:100ms]">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                            <span className="text-sm font-medium text-slate-600 tracking-wide">1ª Edição — Método Vida Plena Pós-Bariátrica</span>
+                        <div className="group relative mx-auto lg:mx-0 flex items-center justify-center rounded-full px-4 py-1.5 shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f] bg-white/80 backdrop-blur-sm animate-fade-in-up [animation-delay:100ms] w-fit">
+                            <span
+                                className={cn(
+                                    "animate-gradient absolute inset-0 block h-full w-full rounded-[inherit] bg-gradient-to-r from-primary/50 via-cyan-400/50 to-primary/50 bg-[length:300%_100%] p-[1px]",
+                                )}
+                                style={{
+                                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    WebkitMaskComposite: "destination-out",
+                                    mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                                    maskComposite: "subtract",
+                                    WebkitClipPath: "padding-box",
+                                }}
+                            />
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse mr-2 relative z-10"></span>
+                            <span className="text-sm font-medium text-slate-600 tracking-wide relative z-10">
+                                1ª Edição — Método Vida Plena Pós-Bariátrica
+                            </span>
                         </div>
 
                         {/* Headline */}
@@ -45,26 +59,31 @@ export const Hero = () => {
                         {/* Offer Box (Price + Scarcity) */}
                         <div className="flex flex-col gap-4 mt-2 bg-white/60 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-soft-sm max-w-xl mx-auto lg:mx-0 animate-fade-in-up [animation-delay:500ms]">
 
+                            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pt-2">
+                                <div className="text-center sm:text-left">
+                                    <p className="text-sm text-slate-500 line-through">De R$ 197</p>
+                                    <p className="text-2xl font-bold text-slate-900">Por apenas R$ 47</p>
+                                </div>
+                                <HoverBorderGradient
+                                    containerClassName="rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                                    as="button"
+                                    className="bg-cyan-600 hover:bg-cyan-500 text-white flex items-center space-x-2 px-8 py-3 transition-colors duration-300"
+                                    maskClassName="bg-cyan-600 hover:bg-cyan-500 transition-colors duration-300"
+                                >
+                                    <span className="font-bold whitespace-nowrap">QUERO GARANTIR MINHA VAGA</span>
+                                    <ArrowRight size={20} />
+                                </HoverBorderGradient>
+                            </div>
+
                             {/* Scarcity Bar */}
-                            <div className="space-y-2">
+                            <div className="space-y-2 pt-2 border-t border-slate-100/50 mt-2">
                                 <div className="flex justify-between text-sm font-medium text-slate-700">
                                     <span className="flex items-center gap-1"><TrendingUp size={16} className="text-cyan-600" /> 37% do lote atual já vendido</span>
                                     <span className="text-cyan-600 font-bold">Últimas vagas</span>
                                 </div>
                                 <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-cyan-600 to-primary w-[37%] rounded-full"></div>
+                                    <div className="h-full bg-gradient-to-r from-cyan-600 to-primary w-[37%] rounded-full animate-pulse shadow-[0_0_10px_rgba(8,145,178,0.5)]"></div>
                                 </div>
-                            </div>
-
-                            <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-                                <div>
-                                    <p className="text-sm text-slate-500 line-through">De R$ 197</p>
-                                    <p className="text-2xl font-bold text-slate-900">Por apenas R$ 47</p>
-                                    <p className="text-xs text-green-600 font-medium bg-green-50 px-2 py-0.5 rounded-full w-fit mt-1">Lote promocional de lançamento</p>
-                                </div>
-                                <FluidButton onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })} className="w-full sm:w-auto">
-                                    QUERO GARANTIR MINHA VAGA<ArrowRight size={20} />
-                                </FluidButton>
                             </div>
                         </div>
 

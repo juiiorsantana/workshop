@@ -6,35 +6,39 @@ import { SocialProof } from './components/SocialProof';
 import { TargetAudience } from './components/TargetAudience';
 import { Pricing } from './components/Pricing';
 import { FluidButton } from './components/ui/FluidButton';
+import { GridBackground } from './components/ui/GridBackground';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-clinical-white font-sans selection:bg-primary selection:text-white">
+    <div className="min-h-screen font-sans selection:bg-primary selection:text-white relative">
+      <GridBackground />
+      <div className="relative z-10 bg-transparent">
 
 
-      <Hero />
-      <Agitation />
-      <TransitionCard />
-      <SocialProof />
-      <TargetAudience />
-      <Pricing />
+        <Hero />
+        <Agitation />
+        <TransitionCard />
+        <SocialProof />
+        <TargetAudience />
+        <Pricing />
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">
-        <div className="container mx-auto px-4 text-center">
-          <p className="font-mono text-xs text-slate-500 mb-4 tracking-widest uppercase">
-            Protocolo Médico Registrado — CRM/SP 123.456
-          </p>
-          <div className="font-display font-bold text-2xl mb-8 text-white">
-            MÉTODO VIDA PLENA © 2024
+        {/* Footer */}
+        <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">
+          <div className="container mx-auto px-4 text-center">
+            <p className="font-mono text-xs text-slate-500 mb-4 tracking-widest uppercase">
+              Protocolo Médico Registrado — CRM/SP 123.456
+            </p>
+            <div className="font-display font-bold text-2xl mb-8 text-white">
+              MÉTODO VIDA PLENA © 2024
+            </div>
+            <div className="flex justify-center gap-6 text-sm font-medium text-slate-400">
+              <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
+              <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
+            </div>
           </div>
-          <div className="flex justify-center gap-6 text-sm font-medium text-slate-400">
-            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
-          </div>
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div >
+    </div >
   );
 };
 

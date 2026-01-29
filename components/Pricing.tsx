@@ -4,7 +4,7 @@ import { Check, ShieldCheck } from 'lucide-react';
 
 export const Pricing = () => {
     return (
-        <section id="pricing" className="py-24 bg-white relative overflow-hidden">
+        <section id="pricing" className="py-24 bg-transparent relative overflow-hidden">
             {/* Abstract Background */}
             <div className="absolute inset-0 bg-slate-50 opacity-40"></div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none"></div>
