@@ -30,7 +30,7 @@ export const Hero = () => {
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
                             <Calendar className="w-5 h-5 text-primary" />
-                            <span>15 e 16 de março | Online via Zoom | Ao vivo</span>
+                            <span>15 e 16 de março | Online via Zoom</span>
                         </motion.div>
 
                         {/* Badge */}
