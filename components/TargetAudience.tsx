@@ -18,29 +18,50 @@ export const TargetAudience: React.FC = () => {
             {/* Background Texture */}
             <div className="absolute inset-0 opacity-20 pointer-events-none [background-size:40px_40px] [background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"></div>
 
-            {/* Marquee Banners - NOW Z-0 to be behind text but visible */}
-            <div className="absolute top-20 w-full transform -rotate-3 z-0 pointer-events-none">
+            {/* Marquee Banners - Infinite scroll with Framer Motion */}
+            <div className="absolute top-20 w-full transform -rotate-3 z-0 pointer-events-none overflow-hidden">
                 <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-4 shadow-2xl">
-                    <div className="animate-marquee whitespace-nowrap flex space-x-12 items-center" style={{ "--duration": "20s", "--gap": "3rem" } as React.CSSProperties}>
+                    <motion.div
+                        className="flex shrink-0"
+                        animate={{ x: [0, -2400] }}
+                        transition={{
+                            x: {
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                duration: 30,
+                                ease: "linear"
+                            }
+                        }}
+                    >
                         {[...Array(20)].map((_, i) => (
-                            <div key={i} className="flex items-center gap-12">
-                                {/* Removed outline-text for now to guarantee visibility, using white/20 text */}
-                                <span className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic">LOGO METODO</span>
-                            </div>
+                            <span key={i} className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic mx-12 shrink-0 whitespace-nowrap">
+                                LOGO METODO
+                            </span>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
-            <div className="absolute top-40 w-full transform rotate-3 z-0 pointer-events-none">
+            <div className="absolute top-40 w-full transform rotate-3 z-0 pointer-events-none overflow-hidden">
                 <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-4 shadow-2xl">
-                    <div className="animate-marquee-reverse whitespace-nowrap flex space-x-12 items-center" style={{ "--duration": "20s", "--gap": "3rem" } as React.CSSProperties}>
+                    <motion.div
+                        className="flex shrink-0"
+                        animate={{ x: [-2400, 0] }}
+                        transition={{
+                            x: {
+                                repeat: Infinity,
+                                repeatType: "loop",
+                                duration: 30,
+                                ease: "linear"
+                            }
+                        }}
+                    >
                         {[...Array(20)].map((_, i) => (
-                            <div key={i} className="flex items-center gap-12">
-                                <span className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic">LOGO METODO</span>
-                            </div>
+                            <span key={i} className="text-white/20 font-display font-black text-3xl tracking-widest uppercase italic mx-12 shrink-0 whitespace-nowrap">
+                                LOGO METODO
+                            </span>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 

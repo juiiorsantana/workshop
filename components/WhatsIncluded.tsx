@@ -4,7 +4,14 @@ import { Check, ShieldCheck, Lock, Clock, Video } from 'lucide-react';
 
 export const WhatsIncluded = () => {
     return (
-        <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <section className="py-24 bg-black relative overflow-hidden">
+            {/* Grid Pattern */}
+            <div
+                className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] opacity-40 pointer-events-none"
+            />
+
+            {/* Radial gradient for fading edges */}
+            <div className="pointer-events-none absolute inset-0 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="bg-slate-900 rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
                     {/* Background Effects */}

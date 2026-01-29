@@ -28,6 +28,7 @@ const App: React.FC = () => {
         <SocialProof />
         <MethodDifferential />
 
+        <WhatsIncluded />
         <WhyCheap />
         <Instructor />
 
