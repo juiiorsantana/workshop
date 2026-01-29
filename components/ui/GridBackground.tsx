@@ -7,7 +7,7 @@ export function GridBackground({ className }: { className?: string }) {
             <div
                 className={cn(
                     "absolute inset-0",
-                    "opacity-[0.4]", // Subtle opacity for the grid lines
+                    "opacity-[0.15]", // Subtle opacity for the grid lines
                     "[background-size:40px_40px]",
                     "[background-image:linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)]",
                     // Using slate-300 (#cbd5e1) for visible but subtle lines on white
