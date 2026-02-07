@@ -3,12 +3,12 @@ import { Check, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const audienceItems = [
-    { title: "Já operou", desc: "e vive em fase de manutenção" },
-    { title: "Reganho de Peso", desc: "começou a notar aumento na balança" },
-    { title: "Compulsões", desc: "sofre com gatilhos silenciosos" },
-    { title: "Evita Socializar", desc: "por vergonha ou desconforto" },
-    { title: "Autoimagem", desc: "não se reconhece mais no espelho" },
-    { title: "Prevenção", desc: "quer evitar problemas futuros" }
+    { title: "Já operou", desc: "e está em fase de manutenção" },
+    { title: "Exames alterados", desc: "Anemia, B12, ferro, cálcio, etc" },
+    { title: "Sintomas", desc: "Queda de cabelo, unhas fracas ou cansaço" },
+    { title: "Alimentação", desc: "Não sabe se está alimentando corretamente" },
+    { title: "Nutrição", desc: "Quer prevenir problemas nutricionais futuros" },
+    { title: "Confusão", desc: "Está confusa com informações contraditórias" }
 ];
 
 export const TargetAudience: React.FC = () => {

@@ -47,10 +47,10 @@ export default function MethodDifferential() {
                             transition={{ staggerChildren: 0.08, delayChildren: 0.3 }}
                         >
                             {[
-                                "Ignoram o medo de reganho",
-                                "Ignoram a culpa ao comer",
-                                "Ignoram padrões comportamentais",
-                                "Ignoram sua nova identidade"
+                                "Foca só em peso",
+                                "Conta calorias",
+                                "Proíbe alimentos",
+                                "Ignora a absorção de nutrientes"
                             ].map((item, i) => (
                                 <motion.li
                                     key={i}
@@ -110,22 +110,22 @@ export default function MethodDifferential() {
                     <GridItem
                         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
                         icon={<Activity className="h-4 w-4 text-black dark:text-neutral-400" />}
-                        title="Nutrologia Estratégica"
-                        description="Suplementação e alimentação ajustadas para sua nova fisiologia, sem neuras."
+                        title="Nutrologia baseada em evidências"
+                        description="Suplementação e alimentação ajustadas para sua nova fisiologia pós-bariátrica."
                     />
 
                     <GridItem
                         area="md:[grid-area:1/7/2/13] xl:[grid-area:1/5/2/9]"
                         icon={<Brain className="h-4 w-4 text-black dark:text-neutral-400" />}
-                        title="Reconstrução Comportamental"
-                        description="Reprogramação de hábitos e gatilhos para que o controle seja natural."
+                        title="Foco em absorção"
+                        description="Não é sobre comer menos, é sobre comer melhor e absorver melhor os nutrientes que seu corpo precisa."
                     />
 
                     <GridItem
                         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/9/2/13]"
                         icon={<Heart className="h-4 w-4 text-black dark:text-neutral-400" />}
-                        title="Gestão Emocional"
-                        description="Aprenda a lidar com a ansiedade e as emoções sem descontar na comida."
+                        title="Protocolos funcionais"
+                        description="Guia prático com receitas saborosas e sem complicação."
                     />
 
                     <GridItem

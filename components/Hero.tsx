@@ -1,4 +1,4 @@
-import { HoverBorderGradient } from './ui/hover-border-gradient';
+import React from 'react';
 import { ArrowRight, Calendar, TrendingUp } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { motion } from 'motion/react';
@@ -30,7 +30,7 @@ export const Hero = () => {
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
                             <Calendar className="w-5 h-5 text-primary" />
-                            <span>15 e 16 de março | Online via Zoom</span>
+                            <span>28 de fevereiro às 19h | Online via Zoom</span>
                         </motion.div>
 
                         {/* Badge */}
@@ -56,21 +56,21 @@ export const Hero = () => {
                             />
                             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse mr-2 relative z-10"></span>
                             <span className="text-sm font-medium text-slate-600 tracking-wide relative z-10">
-                                1ª Edição — Método Vida Plena Pós-Bariátrica
+                                1ª Edição — Nutrição Essencial Pós-Bariátrica
                             </span>
                         </motion.div>
 
                         {/* Headline */}
                         <motion.h1
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-slate-900"
+                            className="text-[2.25rem] md:text-[2.7rem] lg:text-[3.375rem] font-bold leading-[1.1] tracking-tight text-slate-900"
                             variants={{
                                 hidden: { opacity: 0, y: 30 },
                                 visible: { opacity: 1, y: 0 }
                             }}
                             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            Reconstrua Sua Vida <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">Após a Bariátrica</span>
+                            Pare de adivinhar o que comer no pós-bariátrico,<br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">use o protocolo médico correto!</span>
                         </motion.h1>
 
                         {/* Subheadline */}
@@ -82,12 +82,12 @@ export const Hero = () => {
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            O método médico para manter resultados, evitar o reganho e viver com equilíbrio físico e emocional
+                            Aprenda exatamente o que comer, como suplementar e como evitar deficiências que causam anemia, queda de cabelo e cansaço — com o Dr. Lucas Nemes, médico nutrólogo especialista em pós-bariátrica.
                         </motion.h2>
 
                         {/* Offer Box (Price + Scarcity) */}
                         <motion.div
-                            className="flex flex-col gap-4 mt-2 bg-white/60 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-soft-sm max-w-xl mx-auto lg:mx-0"
+                            className="flex flex-col gap-4 mt-6 bg-white/80 backdrop-blur-md border border-slate-200 p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] max-w-xl mx-auto lg:mx-0 w-full"
                             variants={{
                                 hidden: { opacity: 0, y: 30, scale: 0.98 },
                                 visible: { opacity: 1, y: 0, scale: 1 }
@@ -95,36 +95,58 @@ export const Hero = () => {
                             transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
 
-                            <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 pt-2">
-                                <div className="text-center sm:text-left">
-                                    <p className="text-sm text-slate-500 line-through">De R$ 197</p>
-                                    <p className="text-2xl font-bold text-slate-900">Por apenas R$ 47</p>
+                            <motion.button
+                                whileHover="hover"
+                                whileTap="tap"
+                                variants={{
+                                    hover: { scale: 1.05 },
+                                    tap: { scale: 0.95 }
+                                }}
+                                className="relative group w-full rounded-xl shadow-[0_4px_24px_-4px_rgba(6,182,212,0.5)] hover:shadow-[0_8px_32px_-4px_rgba(6,182,212,0.6)] transition-all duration-300 overflow-hidden"
+                            >
+                                {/* Liquid Background */}
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 animate-gradient bg-[length:200%_auto]"
+                                    style={{ "--bg-size": "200%" } as React.CSSProperties}
+                                />
+
+                                {/* Shine Overlay */}
+                                <motion.div
+                                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent w-1/2 skew-x-[-20deg]"
+                                    initial={{ x: "-150%" }}
+                                    variants={{
+                                        hover: { x: "350%", transition: { repeat: Infinity, duration: 1.5, ease: "linear" } }
+                                    }}
+                                />
+
+                                {/* Content */}
+                                <div className="relative px-6 py-4 flex items-center justify-center gap-2 text-white font-bold tracking-wide">
+                                    <span>QUERO GARANTIR MINHA VAGA</span>
+                                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                                 </div>
-                                <HoverBorderGradient
-                                    containerClassName="rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                                    as="button"
-                                    className="bg-cyan-600 hover:bg-cyan-500 text-white flex items-center space-x-2 px-8 py-3 transition-colors duration-300"
-                                    maskClassName="bg-cyan-600 hover:bg-cyan-500 transition-colors duration-300"
-                                >
-                                    <span className="font-bold whitespace-nowrap">QUERO GARANTIR MINHA VAGA</span>
-                                    <ArrowRight size={20} />
-                                </HoverBorderGradient>
-                            </div>
+                            </motion.button>
 
                             {/* Scarcity Bar */}
-                            <div className="space-y-2 pt-2 border-t border-slate-100/50 mt-2">
-                                <div className="flex justify-between text-sm font-medium text-slate-700">
-                                    <span className="flex items-center gap-1"><TrendingUp size={16} className="text-cyan-600" /> 37% do lote atual já vendido</span>
-                                    <span className="text-cyan-600 font-bold">Últimas vagas</span>
+                            <div className="space-y-2 w-full">
+                                <div className="flex justify-between text-xs font-semibold text-slate-600 uppercase tracking-wide">
+                                    <span className="flex items-center gap-1.5"><TrendingUp size={14} className="text-cyan-600" /> 37% Vendido</span>
+                                    <span className="text-cyan-600">Restam Poucas Vagas</span>
                                 </div>
-                                <div className="h-2 w-full bg-slate-200 rounded-full overflow-hidden">
+                                <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden border border-slate-200/60">
                                     <motion.div
-                                        className="h-full bg-gradient-to-r from-cyan-600 to-primary rounded-full shadow-[0_0_10px_rgba(8,145,178,0.5)]"
+                                        className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full relative"
                                         initial={{ width: 0 }}
                                         animate={{ width: "37%" }}
                                         transition={{ duration: 1.2, delay: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
-                                    />
+                                    >
+                                        <div className="absolute top-0 right-0 bottom-0 w-[1px] bg-white/50 shadow-[0_0_10px_white]"></div>
+                                    </motion.div>
                                 </div>
+                            </div>
+
+                            {/* Price */}
+                            <div className="flex items-center justify-center w-full">
+                                <span className="text-sm font-bold text-slate-700">de R$ 197 por apenas R$ 47 no primeiro Lote</span>
                             </div>
                         </motion.div>
 

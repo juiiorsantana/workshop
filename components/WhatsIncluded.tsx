@@ -38,14 +38,12 @@ export const WhatsIncluded = () => {
                             <ul className="space-y-4">
                                 {[
                                     "Workshop ao vivo (Imersão)",
-                                    "Método Vida Plena (PDF)",
-                                    "Planner 90 dias",
+                                    "Guia Prático de nutrição",
                                     "Lista de suplementação",
-                                    "30 receitas funcionais",
-                                    "Certificado 12h",
-                                    "Grupo exclusivo de alunas",
-                                    "Bônus: Aula sobre Excesso de Pele",
-                                    "Condição especial para programa completo"
+                                    "+40 Receitas funcionais",
+                                    "Certificado de participação",
+                                    "Grupo exclusivo de membros",
+                                    "Condição especial para acompanhamento individualizado"
                                 ].map((item, index) => (
                                     <li key={index} className="flex items-start gap-4">
                                         <div className="w-6 h-6 rounded-full bg-gradient-to-tr from-primary to-cyan-500 flex items-center justify-center shrink-0 mt-0.5 shadow-lg shadow-primary/20">
@@ -66,7 +64,7 @@ export const WhatsIncluded = () => {
                                     <div className="p-1.5 bg-pink-500/20 rounded-full text-pink-500">
                                         <Clock size={16} />
                                     </div>
-                                    <span className="text-slate-300 text-sm font-medium">12h de conteúdo</span>
+                                    <span className="text-slate-300 text-sm font-medium">Conteúdo Exclusivo</span>
                                 </div>
                                 <div className="flex items-center gap-2 px-4 py-2 bg-slate-800/50 rounded-full border border-slate-700 backdrop-blur-sm">
                                     <div className="p-1.5 bg-purple-500/20 rounded-full text-purple-500">
@@ -86,7 +84,7 @@ export const WhatsIncluded = () => {
                                 <div className="text-center mb-10">
                                     <div className="text-7xl font-bold text-white tracking-tighter inline-flex items-start">
                                         <span className="text-2xl mt-2 mr-1 text-slate-400">R$</span>
-                                        37
+                                        47
                                         <span className="text-2xl mt-2 text-slate-400">,00</span>
                                     </div>
                                 </div>

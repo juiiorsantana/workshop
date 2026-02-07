@@ -30,7 +30,7 @@ export default function WhyCheap() {
                         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
                         <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-                            Por que um evento <br /> <span className="opacity-90">tão barato?</span>
+                            Por que um evento médico <span className="opacity-90">tão barato?</span>
                         </h2>
                     </motion.div>
 
@@ -49,7 +49,7 @@ export default function WhyCheap() {
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            Porque cansei de ver pacientes pós-bariátricos reganhando peso em silêncio, sem ter condições de pagar R$ 500-800 por consulta particular. A cirurgia pode ser feita pelo SUS, mas o acompanhamento emocional e comportamental depois? Quase ninguém tem acesso. Este workshop existe para democratizar um método completo, científico e testado com centenas de pacientes.
+                            Porque cansei de ver pacientes pós-bariátricos reganhando peso em silêncio. Este workshop existe para democratizar um método completo, científico e testado com centenas de pacientes.
                         </motion.p>
                         <motion.p
                             variants={{
@@ -58,7 +58,7 @@ export default function WhyCheap() {
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            <strong className="text-white">Transparência total:</strong> vou dedicar 80% do tempo entregando valor puro — método completo, protocolos práticos e ferramentas aplicáveis. Nos 20% finais, apresentarei o Programa Vida Plena, meu acompanhamento de 6 meses com consultas online e suporte contínuo, disponível exclusivamente para participantes do workshop.
+                            <strong className="text-white">Com o tempo:</strong> Surgem as consequências: cansaço persistente, queda de cabelo, unhas fracas, flacidez da pele, baixa autoestima e desânimo emocional. Em muitos casos, os exames mostram deficiências importantes, gerando frustração e sensação de abandono. Na maioria das vezes, não é falta de disciplina — é falta de orientação prática e acessível para a realidade do pós-bariátrico..
                         </motion.p>
                         <motion.p
                             variants={{
@@ -67,7 +67,7 @@ export default function WhyCheap() {
                             }}
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            Quero que você experimente a qualidade do método antes de investir mais. Que veja resultados práticos. E só então decida se quer ir mais fundo. Sem pressão. Sem truques. Só ciência e compromisso real.
+                            <strong className="text-white">Transparência Total:</strong> vou dedicar 80% do tempo entregando valor puro — método completo, protocolos práticos e ferramentas aplicáveis. Nos 20% finais, apresentarei o Programa Vida Plena, meu acompanhamento de 6 meses com consultas online e suporte contínuo, disponível exclusivamente para participantes do workshop.
                         </motion.p>
                     </motion.div>
 

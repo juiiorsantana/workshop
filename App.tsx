@@ -7,6 +7,7 @@ import { TargetAudience } from './components/TargetAudience';
 
 import MethodDifferential from './components/MethodDifferential';
 import { Instructor } from './components/Instructor';
+import { FinalWarning } from './components/FinalWarning';
 import WorkshopProgram from './components/WorkshopProgram';
 import { WhatsIncluded } from './components/WhatsIncluded';
 
@@ -31,6 +32,7 @@ const App: React.FC = () => {
         <WhatsIncluded />
         <WhyCheap />
         <Instructor />
+        <FinalWarning />
 
         {/* Footer */}
         <footer className="bg-slate-900 text-white py-12 border-t border-slate-800">

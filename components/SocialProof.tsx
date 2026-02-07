@@ -4,16 +4,16 @@ import { PointerHighlight } from './ui/pointer-highlight';
 import { motion } from 'motion/react';
 
 const stats = [
-    { label: 'Pacientes atendidos', value: '+500', icon: '👥' },
+    { label: 'Pacientes atendidos', value: '+300', icon: '👥' },
     { label: 'Mantêm o peso após 12 meses', value: '89%', icon: '⚖️' },
     { label: 'Média de gordura eliminada', value: '15kg', icon: '🔥' },
-    { label: 'Casos de desnutrição grave', value: 'Zero', icon: '✅' },
+    { label: 'Dedicados à nutrologia', value: '10 Anos', icon: '✅' },
 ];
 
 const testimonials = [
     {
         quote: "Hoje mantenho meus 45kg a menos e finalmente tenho paz com a comida.",
-        author: "Ana Paula",
+        author: "Ana P.",
         age: "38",
         role: "Paciente há 2 anos"
     },
@@ -28,6 +28,24 @@ const testimonials = [
         author: "Juliana Costa",
         age: "35",
         role: "Paciente há 6 meses"
+    },
+    {
+        quote: "Me sinto com 20 anos de novo, recuperei minha energia vital.",
+        author: "Roberto S.",
+        age: "45",
+        role: "Paciente há 3 anos"
+    },
+    {
+        quote: "O método mudou minha relação com o espelho e com a saúde.",
+        author: "Fernanda L.",
+        age: "31",
+        role: "Paciente há 8 meses"
+    },
+    {
+        quote: "Profissionalismo e atenção ímpares, recomendo de olhos fechados.",
+        author: "Marcelo D.",
+        age: "50",
+        role: "Paciente há 1.5 anos"
     }
 ];
 
@@ -50,7 +68,7 @@ export const SocialProof: React.FC = () => {
                     transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
                 >
                     <h2 className="font-display font-bold text-4xl md:text-5xl text-medical-slate mb-6">
-                        Mais de <PointerHighlight containerClassName="inline-flex align-bottom" rectangleClassName="bg-blue-500/20 border-none rounded-md" pointerClassName="text-blue-500"><span className="text-primary px-1">500 pacientes</span></PointerHighlight> já transformaram suas vidas
+                        Mais de <PointerHighlight containerClassName="inline-flex align-bottom" rectangleClassName="bg-blue-500/20 border-none rounded-md" pointerClassName="text-blue-500"><span className="text-primary px-1">300 pacientes</span></PointerHighlight> já transformaram suas vidas
                     </h2>
                     <p className="text-lg text-slate-600">
                         com o acompanhamento do Dr. Lucas Nemes. Resultados reais, baseados em ciência e empatia.

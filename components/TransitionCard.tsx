@@ -97,10 +97,10 @@ export const TransitionCard = () => {
                             transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-                                Manter é mais difícil do que <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">emagrecer</span>.
+                                A Cirurgia te deu uma nova chance, agora você <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600">precisa do protocolo certo.</span>
                             </h2>
                             <p className="text-lg text-slate-600 font-medium">
-                                Porque é no Pós que você precisa:
+                                A Bariátrica tratou a obesidade, mas <b>NÃO</b> ensina a se alimentar no longo prazo, não explica quais vitaminas repor e não mostra como:
                             </p>
                         </motion.div>
 
@@ -120,7 +120,7 @@ export const TransitionCard = () => {
                                         <Utensils size={20} />
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-800 text-lg">Relação Equilibrada</h3>
+                                        <h3 className="font-bold text-slate-800 text-lg">Alimentação correta</h3>
                                         <p className="text-slate-600 leading-snug mt-1">Criar uma relação equilibrada com a comida, sem restrições absurdas.</p>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@ export const TransitionCard = () => {
                                     <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-red-500">
                                         <Brain size={20} />
                                     </div>
-                                    <p className="font-bold text-slate-800 leading-snug">Entender seus gatilhos emocionais</p>
+                                    <p className="font-bold text-slate-800 leading-snug">Quais micronutrientes são essenciais</p>
                                 </div>
                             </motion.div>
 
@@ -156,7 +156,7 @@ export const TransitionCard = () => {
                                     <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
                                         <Leaf size={20} />
                                     </div>
-                                    <p className="font-bold text-slate-800 leading-snug">Construir hábitos sustentáveis</p>
+                                    <p className="font-bold text-slate-800 leading-snug">Como evitar deficiências silenciosas</p>
                                 </div>
                             </motion.div>
 
@@ -173,7 +173,7 @@ export const TransitionCard = () => {
                                     <div className="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-primary shrink-0">
                                         <Heart size={20} />
                                     </div>
-                                    <p className="font-bold text-slate-800 text-lg">Cuidar do corpo e da mente juntos</p>
+                                    <p className="font-bold text-slate-800 text-lg">Como manter saúde e qualidade de vida</p>
                                 </div>
                             </motion.div>
                         </div>

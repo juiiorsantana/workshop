@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-// IMAGENS - Substitua os links abaixo pelas imagens corretas
+// IMAGENS
 // A imagem desktop deve ter o Dr. Lucas à esquerda e espaço vazio à direita para o texto
-const DESKTOP_IMAGE = "https://placehold.co/1920x1080/1e293b/FFFFFF/png?text=FOTO+DESKTOP+(Dr.+na+Esquerda)";
+const DESKTOP_IMAGE = "https://drlucasnemes.com.br/wp-content/uploads/2026/02/bg-secao-quem-vai-te-ensinar.avif";
 // A imagem mobile deve ter o Dr. Lucas no topo e espaço vazio embaixo (ou degradê) para o texto
-const MOBILE_IMAGE = "https://placehold.co/1080x1920/1e293b/FFFFFF/png?text=FOTO+MOBILE+(Dr.+no+Topo)";
+const MOBILE_IMAGE = "https://drlucasnemes.com.br/wp-content/uploads/2026/02/bg-secao-quem-vai-te-ensinar.avif";
 
 export const Instructor = () => {
     return (
@@ -71,7 +71,7 @@ export const Instructor = () => {
                                 <span className="text-white font-medium">Médico Nutrólogo graduado pela UFMT e Especialista pela ABRAN/AMB</span>, referência em acompanhamento pós-bariátrico em Mato Grosso.
                             </p>
                             <p>
-                                Nos últimos 3 anos, atendi <span className="text-white font-medium">mais de 500 pacientes pós-bariátricos</span>, desenvolvendo um método que vai além da nutrologia tradicional. Trabalhamos com mudança comportamental profunda, gestão emocional e reconstrução de identidade — porque cada pessoa é única, e manter resultados exige muito mais que dieta e suplementos.
+                                Nos últimos 10 anos, atendi <span className="text-white font-medium">mais de 300 pacientes pós-bariátricos</span>, desenvolvendo um método que vai além da nutrologia tradicional. Trabalhamos com mudança comportamental profunda, gestão emocional e reconstrução de identidade — porque cada pessoa é única, e manter resultados exige muito mais que dieta e suplementos.
                             </p>
                         </motion.div>
                     </div>

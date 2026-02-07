@@ -90,38 +90,43 @@ export const Pricing = () => {
                             transition={{ staggerChildren: 0.1, delayChildren: 0.4 }}
                         >
                             <motion.div
-                                className="inline-block px-4 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-wider mb-6"
+                                className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-primary/20 to-blue-500/20 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-wider mb-8"
                                 variants={{
                                     hidden: { opacity: 0, y: 10 },
                                     visible: { opacity: 1, y: 0 }
                                 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                Lote Promocional
+                                ✨ Oferta Especial
                             </motion.div>
 
+                            <motion.p
+                                className="text-slate-400 line-through text-lg mb-2"
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    visible: { opacity: 1 }
+                                }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                de R$ 197,00
+                            </motion.p>
+
                             <motion.div
-                                className="text-7xl font-bold tracking-tighter mb-2 flex items-start text-white"
+                                className="mb-8"
                                 variants={{
                                     hidden: { opacity: 0, scale: 0.9 },
                                     visible: { opacity: 1, scale: 1 }
                                 }}
                                 transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
                             >
-                                <span className="text-2xl mt-2 mr-2 opacity-60">R$</span>
-                                47
-                                <span className="text-2xl mt-2 opacity-60">,90</span>
+                                <p className="text-primary text-xl font-semibold mb-2">
+                                    1º Lote por apenas
+                                </p>
+                                <div className="flex items-baseline gap-1">
+                                    <span className="text-3xl font-medium text-slate-400">R$</span>
+                                    <span className="text-8xl md:text-9xl font-bold tracking-tighter text-white">47</span>
+                                </div>
                             </motion.div>
-                            <motion.p
-                                className="opacity-50 line-through text-lg mb-10 pl-2"
-                                variants={{
-                                    hidden: { opacity: 0 },
-                                    visible: { opacity: 0.5 }
-                                }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                De R$ 197,00
-                            </motion.p>
 
                             <motion.div
                                 variants={{

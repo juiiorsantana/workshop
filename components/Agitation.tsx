@@ -4,10 +4,10 @@ import { motion } from 'motion/react';
 
 export const Agitation = () => {
     const pains = [
-        "Medo constante do reganho de peso",
-        "Culpa ao comer qualquer coisa fora da dieta",
-        "Ansiedade social em restaurantes",
-        "Sensação de que a cirurgia falhou"
+        "Não sabe o que comer após a bariátrica",
+        "Quais suplementos são necessários no seu caso",
+        "Como evitar viver à base de comprimidos",
+        "Como montar refeições equilibradas e saborosas"
     ];
 
     return (
@@ -36,8 +36,8 @@ export const Agitation = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
                         >
-                            Você venceu a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600 font-black">obesidade</span>, <br />
-                            mas a guerra continua?
+                            A cirurgia mudou o seu corpo, mas ningúem te ensinou <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-600 font-black">a como cuidar depois?</span>
+
                         </motion.h2>
 
                         <motion.div
@@ -66,7 +66,7 @@ export const Agitation = () => {
                         </motion.div>
 
                         <motion.div
-                            className="mt-12 p-8 bg-slate-900 text-white text-center rounded-3xl relative overflow-hidden shadow-soft-xl"
+                            className="mt-12 p-8 bg-slate-900 text-white text-center rounded-3xl relative shadow-soft-xl"
                             initial={{ opacity: 0, y: 30, scale: 0.95 }}
                             whileInView={{ opacity: 1, y: 0, scale: 1 }}
                             viewport={{ once: true }}
@@ -77,7 +77,7 @@ export const Agitation = () => {
                                 Diagnóstico
                             </div>
                             <p className="text-xl font-medium leading-relaxed opacity-90 relative z-10">
-                                "Se você marcou 2 ou mais pontos, seu <span className="text-primary font-bold">software mental</span> ainda está desatualizado."
+                                "Se você se identificou com pelo menos 2 pontos, essa <span className="text-primary font-bold">imersão</span> foi criada exatamente para você."
                             </p>
                         </motion.div>
                     </motion.div>
